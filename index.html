@@ -1093,91 +1093,103 @@ html { scroll-padding-top: 0; }
 
 </style>
   <style>
-/* Copy-led compositions: a longer welcome, a margin note, and a quiet reply. */
-.rebuild-label{display:flex;align-items:center;gap:15px;width:fit-content;margin-bottom:29px;padding-bottom:15px;border-bottom:1px solid #b2c79b55;color:#d0dcbb;font:400 24px/1.4 var(--serif);letter-spacing:.16em}
-.rebuild-label svg{width:39px;height:39px;stroke:#bdcd9f;stroke-width:1.15;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
-.rebuild-label .binding-thread{stroke:#efeed8}.rebuild-label circle{fill:#d3dfb6;stroke:none}
-.rebuild-lead{max-width:390px;font-size:17px;line-height:1.95}.rebuild-lead>span{display:block;text-wrap:balance}.rebuild-lead>span+span{margin-top:13px;color:#d0d9c0}
-.rebuild-controls button{font-size:15px;white-space:nowrap}
-@media(min-width:1000px) and (max-height:850px){.rebuild-chapter{padding-block:59px}.rebuild-signature{display:none}.rebuild-label{font-size:23px;margin-bottom:23px}.rebuild-copy h2{font-size:clamp(38px,3.85vw,53px)}.rebuild-lead{margin-top:22px}.rebuild-controls{margin-top:24px}.rebuild-bottom{margin-top:30px;padding-top:21px}}
-@media(max-width:1000px){.rebuild-controls button{font-size:14px}.rebuild-controls button span{display:block;margin:0 0 7px}.rebuild-label{font-size:22px;gap:12px}.rebuild-label svg{width:34px;height:34px}}
-@media(max-width:740px){.rebuild-label{margin-bottom:24px;padding-bottom:12px}.rebuild-lead{font-size:16px;max-width:100%}.rebuild-lead>span+span{margin-top:10px}.rebuild-controls button{padding-top:15px;line-height:1.8}.rebuild-panel h3{font-size:25px;letter-spacing:-.035em;text-wrap:balance}}
-@media(max-width:380px){.rebuild-label{font-size:21px}.rebuild-panel h3{font-size:22px}.rebuild-controls button{font-size:13px;letter-spacing:0}.folio-metadata{flex-direction:column;align-items:flex-start;gap:7px;padding-bottom:15px}.folio-metadata em{font-size:21px}}
-.hero h1{font-size:clamp(32px,3.35vw,51px);line-height:1.5;letter-spacing:.015em;text-wrap:balance}
-.hero h1 .hero-clause{display:inline-block;color:inherit;white-space:nowrap}
-.hero h1 .hero-hello{color:#c8d9ad}
-.hero-title>p{font-size:17px;margin-top:19px;letter-spacing:.025em}
-.scroll-invitation{font-size:17px;letter-spacing:.1em;gap:25px;white-space:nowrap;min-height:40px}
-.scroll-invitation i{font-size:23px}
-.memories .section-heading{display:grid;grid-template-columns:1.4fr .8fr;gap:60px;align-items:end}
-.memories .section-heading h2{font-size:clamp(33px,3.75vw,56px);line-height:1.6;letter-spacing:-.025em}
-.memories .section-heading .section-description{font-size:17px;line-height:1.95;margin:0 0 7px;max-width:26em}
-.section-description>span{display:block}.section-description>span+span{margin-top:9px}
-.memories .gallery-note{font:400 15px/1.8 var(--sans);color:#acbea1;margin-top:20px}
-.memory-closing{padding:75px 0 85px}.memory-closing p{font:400 clamp(25px,2.65vw,39px)/1.75 var(--serif);letter-spacing:.01em}
-.meaning{padding-block:100px 98px}
-.meaning-heading{display:grid;grid-template-columns:1.45fr .85fr;gap:65px;align-items:center}
-.meaning-heading h2{font-size:clamp(32px,3.6vw,53px);line-height:1.7;letter-spacing:-.025em}
-.meaning-heading h2>span{display:inline-block;margin-left:1.9em;color:#637d56}
-.meaning-intro{padding:22px 0 20px 28px;border-left:1px solid #83936c4d}
-.meaning-lead{font:400 24px/1.8 var(--serif);color:#425840;letter-spacing:.02em}
-.meaning-heading .section-description{margin:18px 0 0;font-size:16px;line-height:2;max-width:24em;color:#75826a}
-.meaning-story{grid-template-columns:.88fr 1.12fr;gap:70px;margin-top:57px;align-items:start}
-.meaning-story .moment{margin-bottom:28px;padding-top:17px;font-size:13px;border-color:#8d9c754d}
-.meaning-story .moment>span:first-child{font:400 19px var(--serif);color:#526949}
-.meaning-story .moment>span+span{font-size:13px}
-.meaning-story .moment>span:only-child{font:400 19px var(--serif)}
-.meaning-note{position:relative;isolation:isolate;padding:32px 34px 26px;background:#f8f6eb;box-shadow:0 7px 20px #44502c05;border:1px solid #85937125}
-.meaning-note::before{content:"";position:absolute;inset:6px -6px -7px 6px;border-right:1px solid #8c9e7042;border-bottom:1px solid #8c9e7042;z-index:-1}
-.meaning-note blockquote{font:400 clamp(25px,2.35vw,34px)/1.85 var(--serif);color:#4e6745;letter-spacing:.015em}
-.meaning-note>p{font-size:15px;line-height:1.85;color:#7a886d;margin-top:24px}
-.meaning-note .time-thread{margin-top:34px;width:100%;background:linear-gradient(90deg,#83997780,#83997715)}
-.new-question{font-size:17px;line-height:1.9;color:#718064;max-width:31em}
-.new-understanding{padding:0 0 0 20px;margin:27px 0 0;gap:17px;background:none;border-radius:0;border-left:1px solid #839b62}
-.new-understanding img{width:27px;margin-top:8px}
-.new-understanding blockquote{font:400 clamp(20px,1.85vw,27px)/1.95 var(--serif);letter-spacing:0;color:#364d38;text-wrap:balance}
-.weight{padding-block:95px 100px}
-.weight-heading{display:grid;grid-template-columns:1.3fr .85fr;gap:65px;align-items:end}
-.weight-heading h2{font-size:clamp(35px,3.85vw,57px);line-height:1.6;letter-spacing:-.015em}
-.weight-heading .section-description{font-size:17px;line-height:1.95;margin:0 0 8px;max-width:26em}
-.weight-composition{margin-top:62px}
-@media(min-width:801px) and (max-height:850px){
- .hero h1{font-size:clamp(32px,3.25vw,45px)}.hero-title{bottom:77px}.hero-title>p{font-size:16px;margin-top:13px}.scroll-invitation{bottom:20px}
- .memories .section-heading{grid-template-columns:1.35fr .9fr;gap:40px}.memories .section-heading h2{font-size:clamp(30px,3.35vw,45px)}
- .memories .section-heading .section-description,.weight-heading .section-description{font-size:16px;line-height:1.85}
- .memories .section-description .wide-break{display:none}.memory-closing{padding-block:48px 58px}
- .meaning,.weight{padding-block:66px}.meaning-heading{gap:45px}.meaning-heading h2{font-size:clamp(32px,3.3vw,45px)}.meaning-lead{font-size:22px}
- .meaning-story{margin-top:38px;gap:55px}.meaning-note{padding:24px 28px}.meaning-note blockquote{font-size:29px}.meaning-note>p{margin-top:18px}.meaning-note .time-thread{margin-top:26px}
- .new-understanding blockquote{font-size:23px;line-height:1.9}.weight-heading h2{font-size:clamp(34px,3.5vw,48px)}.weight-composition{margin-top:42px}
+/* Editorial rhythm: offset verses, an open letter, and a bound volume. */
+.title-line{display:block;width:fit-content}
+.hero h1{font-size:clamp(37px,3.8vw,57px);line-height:1.44;letter-spacing:.035em}
+.hero h1 .hero-clause{display:block;width:fit-content;white-space:nowrap;margin-inline:auto;color:inherit}
+.hero h1 .hero-clause:first-child{font-size:.76em;translate:-1.8em 0;color:#dce2cd;line-height:1.7}
+.hero h1 .hero-clause:last-child{translate:.8em 0}.hero h1 .hero-hello{color:#c8d9ad}
+.hero-scene{height:calc(100% - 316px);max-height:585px;top:0}
+.hero-wordmark{top:12%;font-size:clamp(160px,16.2vw,230px)}
+.hero-title{bottom:105px}.hero-title>p{font-size:16px;line-height:1.9;letter-spacing:.075em;margin-top:21px;color:#b0c0a4}
+.scroll-invitation{font-size:16px;letter-spacing:.1em;gap:25px;white-space:nowrap;min-height:40px;bottom:29px;color:#b8c8a7}.scroll-invitation i{font-size:23px}
+.memories{padding-top:100px}.memories .section-heading{display:block}
+.memories .section-heading h2{font-size:clamp(42px,4.65vw,68px);line-height:1.55;letter-spacing:-.01em}
+.memories .section-heading h2 .title-line{color:#efeedc}.memories .section-heading h2 .title-accent{color:#b8c99c;margin-left:1.25em}
+.memories .section-heading .section-description{font-size:17px;line-height:1.95;margin:28px 0 0 51%;max-width:31em}
+.section-description>span{display:block}.section-description>span+span{margin-top:7px}.section-description .wide-break{display:none}
+.memory-gallery{margin-top:14px}.memories .gallery-note{font:400 14px/1.8 var(--sans);color:#acbea1;margin-top:21px}
+.memory-closing{padding:77px 0 91px}.memory-closing p{font:400 clamp(26px,2.85vw,42px)/1.8 var(--serif);letter-spacing:.01em}
+.meaning{padding-block:110px 92px;background:radial-gradient(ellipse at 22% 35%,#dde0cc40,transparent 62%),#f4f1e8;overflow:hidden}
+.meaning-heading{display:block;position:relative}.meaning-heading h2{font-size:clamp(43px,4.55vw,66px);line-height:1.57;letter-spacing:-.025em}
+.meaning-heading h2>.title-line{display:block;margin:0;color:#293f30}.meaning-heading h2>.title-line:nth-child(2){margin-left:.72em}.meaning-heading h2>.title-accent{margin-left:2.3em;color:#72865c}
+.meaning-intro{width:31%;margin:-115px 0 0 auto;padding:0;border:0}
+.meaning-lead{font:400 23px/1.85 var(--serif);color:#425840;letter-spacing:.02em}
+.meaning-heading .section-description{font-size:16px;line-height:2;margin:18px 0 0;max-width:23em;color:#75826a}
+.meaning-story{grid-template-columns:.78fr 1.22fr;gap:100px;margin-top:88px;align-items:start}.meaning-story .now{margin-top:43px}
+.meaning-story .moment{margin-bottom:24px;padding:0;border:0;font-size:12px;align-items:baseline}
+.meaning-story .moment>span:first-child,.meaning-story .moment>span:only-child{font:400 18px var(--serif);color:#526949}.meaning-story .moment>span+span{font-size:12px}
+.moment time{font:italic 34px var(--display);margin-right:7px;color:#869773}
+.meaning-note{position:relative;padding:12px 0 0;background:none;border:0;box-shadow:none}.meaning-note::before{display:none}
+.meaning-note blockquote{font:400 clamp(29px,2.55vw,38px)/1.85 var(--serif);color:#4e6745;letter-spacing:.015em}.meaning-note>p{font-size:15px;line-height:1.85;color:#7a886d;margin-top:24px}
+.meaning-note .time-thread{height:86px;width:calc(100% + 125px);margin-top:8px;background:none}.time-thread svg{display:block;width:100%;height:100%;overflow:visible}
+.time-thread path{stroke:#91a274;stroke-width:1}.time-thread .thread-echo{stroke-width:.6;opacity:.22}.time-thread circle{fill:#91a274}
+.new-question{font-size:17px;line-height:1.9;color:#718064;max-width:28em;padding-bottom:25px;border-bottom:1px solid #9ba98745}
+.new-understanding{padding:0;margin:27px 0 0;gap:20px;background:none;border:0;border-radius:0}.new-understanding img{width:28px;margin-top:10px;opacity:.8}
+.new-understanding blockquote{font:400 clamp(23px,2.07vw,30px)/1.9 var(--serif);letter-spacing:0;color:#364d38;text-wrap:pretty}
+.weight{padding-block:105px 108px;background:#e7eadc}.weight-heading{display:block}
+.weight-heading h2{font-size:clamp(46px,4.8vw,70px);line-height:1.57;letter-spacing:-.015em}.weight-heading h2 .title-line{color:#293f30}.weight-heading h2 .title-accent{margin-left:1.1em;color:#738761}
+.weight-heading .section-description{font-size:17px;line-height:1.95;margin:29px 0 0 53%;max-width:29em}
+.weight-composition{margin-top:62px;grid-template-columns:1.22fr .78fr;gap:94px}.weight-explanation h3{font:400 31px/1.6 var(--serif)}.weight-explanation>p{font-size:16px;line-height:1.95}.weight-principle{gap:23px}.weight-principle>span{font:400 38px var(--serif)}.weight-principle p{font-size:15px}
+.rebuild-chapter{padding:102px 0 76px;background:radial-gradient(ellipse at 78% 35%,#3b514335,transparent 65%),#182f26}
+.rebuild-layout{grid-template-columns:.9fr 1.1fr;gap:85px}.rebuild-label{display:flex;align-items:center;gap:13px;width:fit-content;margin-bottom:35px;padding:0;border:0;color:#d0dcbb;font:400 23px/1.4 var(--serif);letter-spacing:.16em}
+.rebuild-label svg{width:35px;height:35px;stroke:#bdcd9f;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}.rebuild-label .binding-thread{stroke:#efeed8}.rebuild-label circle{fill:#d3dfb6;stroke:none}
+.rebuild-copy h2{font-size:clamp(43px,4.3vw,62px);line-height:1.52;letter-spacing:-.035em}.rebuild-copy h2 .title-line{color:#efeee1;white-space:nowrap}.rebuild-copy h2 .title-accent{color:#c9d8b0}.rebuild-copy h2 .title-line:last-child{margin-left:.6em}
+.rebuild-lead{font-size:17px;line-height:1.95;max-width:390px;margin-top:31px}.rebuild-lead>span{display:block;text-wrap:balance}.rebuild-lead>span+span{margin-top:12px;color:#d0d9c0}
+.rebuild-signature{font-size:42px;margin-top:35px;transform:rotate(-5deg);transform-origin:left center;color:#a8bb9480}.rebuild-signature span{display:inline;margin-left:8px}
+.rebuild-volume{padding:20px 0 22px 24px;perspective:1700px}.rebuild-volume::before{inset:14px 4px 23px 13px;transform:rotate(-6deg);background:#8fa380}.rebuild-volume::after{inset:22px -6px 16px 24px;transform:rotate(2.5deg);background:#cbd2b8}
+.rebuild-page{padding:27px 31px 26px 48px;min-height:456px;border-left:7px solid #8e9c77;border-radius:1px 4px 4px 1px;background:linear-gradient(90deg,#dbdfc9,#f0efdf 22px,#e9eada)}.rebuild-page::before{left:19px}
+.folio-metadata em{font-size:24px}.rebuild-panel h3{font-size:29px;line-height:1.65;margin:25px 0 22px;letter-spacing:-.035em;text-wrap:balance}
+.rebuild-ingredients li{grid-template-columns:29px 1fr auto;gap:12px;padding:13px 0;font-size:15px}.rebuild-ingredients i{font-size:24px}.rebuild-ingredients small{font-size:12px}
+.rebuild-controls{margin-top:29px;gap:13px}.rebuild-controls button{display:flex;align-items:baseline;gap:11px;font-size:15px;font-weight:400;white-space:nowrap}.rebuild-controls button span{font-size:25px;margin:0}.rebuild-controls button::before{height:1px}.rebuild-controls button[aria-selected=true]::before{width:100%}
+.rebuild-bottom{margin-top:45px;padding-top:24px}
+/* Viewport-driven reveals replay through the existing visibility observer. */
+.has-js .hero-title.reveal{transform:none}.hero-title.is-visible .hero-clause,.hero-title.is-visible>p{animation:verse-arrive 1.25s var(--ease) both}.hero-title.is-visible .hero-clause:last-child{animation-delay:.13s}.hero-title.is-visible>p{animation-delay:.28s}
+.reveal.is-visible .title-line{animation:verse-arrive 1.1s var(--ease) both}.reveal.is-visible .title-line:nth-child(2){animation-delay:.11s}.reveal.is-visible .title-line:nth-child(3){animation-delay:.23s}
+.meaning-intro.is-visible{transition-delay:.16s}.has-js .meaning-note .thread-ink{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.65s .45s cubic-bezier(.3,.1,.2,1)}.has-js .then.is-visible .thread-ink{stroke-dashoffset:0}
+.then.is-visible .meaning-note blockquote{animation:verse-arrive 1.1s .1s var(--ease) both}.rebuild-copy.is-visible .binding-thread{stroke-dasharray:40;animation:binding-ink 1.6s .3s var(--ease) both}
+@keyframes verse-arrive{from{opacity:0;transform:translateY(24px);clip-path:inset(0 0 18% 0)}to{opacity:1;transform:translateY(0);clip-path:inset(0)}}
+@keyframes binding-ink{from{stroke-dashoffset:40}to{stroke-dashoffset:0}}
+@media(min-width:1000px) and (max-height:850px){
+ .hero-scene{height:calc(100% - 264px);max-height:none}.hero-wordmark{top:8%;font-size:clamp(125px,min(15.6vw,21svh),184px)}.hero h1{font-size:clamp(37px,5.3svh,46px)}.hero-title{bottom:80px}.hero-title>p{font-size:16px;margin-top:14px}.scroll-invitation{bottom:17px}
+ .memories{padding-top:65px}.memories .section-heading h2{font-size:clamp(38px,3.95vw,53px)}.memories .section-heading .section-description{font-size:16px;margin:10px 0 0 53%}.memory-gallery{height:426px}.memory-closing{padding:48px 0 58px}
+ .meaning{padding-block:69px 48px}.meaning-heading h2{font-size:clamp(42px,4vw,54px)}.meaning-intro{margin-top:-108px}.meaning-lead{font-size:21px}.meaning-story{margin-top:58px;gap:92px}.meaning-story .now{margin-top:31px}.meaning-note blockquote{font-size:33px}.new-understanding blockquote{font-size:25px}
+ .weight{padding-block:62px 74px}.weight-heading h2{font-size:clamp(40px,4.3vw,57px)}.weight-heading .section-description{font-size:16px;margin:12px 0 0 54%}.weight-composition{gap:76px;margin-top:40px}
+ .rebuild-chapter{padding-block:62px 50px}.rebuild-layout{gap:74px}.rebuild-label{font-size:22px;margin-bottom:24px}.rebuild-copy h2{font-size:clamp(39px,3.9vw,52px)}.rebuild-lead{font-size:16px;margin-top:26px;max-width:360px}.rebuild-signature{display:block;font-size:33px;margin-top:24px}.rebuild-page{min-height:422px;padding-top:24px;padding-bottom:24px}.rebuild-ingredients li{padding-block:11px}.rebuild-controls{margin-top:22px}.rebuild-bottom{margin-top:30px}
 }
-@media(min-width:801px) and (max-height:650px){.hero-title{bottom:61px}.hero h1{font-size:32px}.hero-title>p{font-size:15px;margin-top:8px}.scroll-invitation{bottom:11px;font-size:15px}}
-@media(max-width:1050px){
- .memories .section-heading,.meaning-heading,.weight-heading{gap:35px}.memories .section-heading h2{font-size:34px}
- .memories .section-heading .section-description,.weight-heading .section-description{font-size:16px}.wide-break{display:none}
- .meaning-heading h2{font-size:35px}.meaning-intro{padding-left:22px}.meaning-lead{font-size:21px}.meaning-heading .section-description{font-size:16px}
- .meaning-story{gap:35px}.new-understanding blockquote{font-size:22px}.weight-heading h2{font-size:38px}
+@media(max-width:1100px){
+ .memories .section-heading h2{font-size:clamp(38px,4.65vw,51px)}.memories .section-heading .section-description{margin-left:44%}
+ .meaning-heading h2{font-size:44px}.meaning-intro{width:34%;margin-top:-96px}.meaning-lead{font-size:21px}.meaning-story{gap:54px}.meaning-note blockquote{font-size:31px}.new-understanding blockquote{font-size:25px}
+ .weight-heading h2{font-size:49px}.weight-heading .section-description{margin-left:45%}.weight-composition{gap:45px}
+ .rebuild-layout{gap:42px}.rebuild-copy h2{font-size:43px}.rebuild-page{padding:25px 24px 25px 36px}.rebuild-panel h3{font-size:26px}.rebuild-ingredients li{gap:8px}.rebuild-controls{gap:10px}.rebuild-controls button{font-size:14px;display:block}.rebuild-controls button span{display:block;margin:0 0 7px}.folio-metadata em{font-size:22px}
 }
-@media(max-width:800px){
- .hero h1{font-size:clamp(28px,4.4vw,35px)}.hero-title>p{font-size:16px}.scroll-invitation{font-size:16px}
- .memories .section-heading{grid-template-columns:1fr;gap:22px}.memories .section-heading h2{font-size:clamp(32px,5.3vw,42px)}
- .memories .section-heading .section-description{max-width:31em;margin:0}.section-description>span+span{margin-top:4px}
- .meaning-heading{grid-template-columns:1fr;gap:27px}.meaning-heading h2{font-size:clamp(32px,5.3vw,42px)}.meaning-heading h2>span{margin-left:1.4em}
- .meaning-intro{padding:3px 0 3px 21px;max-width:480px;margin-left:16%}.meaning-lead{font-size:22px}.meaning-lead br{display:none}.meaning-heading .section-description{margin-top:12px;max-width:none}.meaning-heading .section-description br{display:none}
- .meaning-story{grid-template-columns:1fr;gap:34px;margin-top:40px}.meaning-note{max-width:460px}.meaning-story .now{margin:0 0 0 10%}.new-understanding blockquote{font-size:23px}
- .weight-heading{grid-template-columns:1fr;gap:22px}.weight-heading h2{font-size:clamp(33px,5.3vw,43px)}.weight-heading .section-description{margin:0;max-width:34em}
+@media(max-width:850px){
+ .hero h1{font-size:35px}.hero-wordmark{font-size:20vw;top:23%}.hero-scene{height:calc(100% - 290px)}
+ .memories .section-heading .section-description{margin:28px 0 0 24%}.meaning-intro{width:auto;margin:32px 0 0 28%;max-width:420px}.meaning-heading h2{font-size:clamp(34px,5.4vw,44px)}.meaning-story{gap:35px;margin-top:62px}.meaning-note blockquote{font-size:29px}.new-understanding blockquote{font-size:23px}
+ .weight-heading h2{font-size:clamp(36px,6vw,49px)}.weight-heading .section-description{margin-left:28%}.weight-composition{grid-template-columns:1fr;gap:45px}.weight-explanation{max-width:560px}
+ .rebuild-copy h2{font-size:38px}.rebuild-layout{gap:25px}.rebuild-page{padding-left:29px;padding-right:19px}.rebuild-ingredients li{font-size:14px;gap:7px;grid-template-columns:23px 1fr auto}.rebuild-ingredients small{font-size:11px}.folio-metadata{gap:8px}.folio-metadata em{font-size:20px}
+}
+@media(min-width:801px) and (max-width:999px) and (max-height:850px){
+ .hero-scene{height:calc(100% - 276px)}.hero-wordmark{top:12%;font-size:clamp(115px,min(17vw,20svh),155px)}.hero-title{bottom:85px}.hero h1{font-size:35px}.scroll-invitation{bottom:19px}
+}
+@media(max-width:740px){
+ .memories{padding-top:72px}.memories .section-heading h2{font-size:clamp(27px,5.5vw,41px)}.memories .section-heading .section-description{font-size:16px;margin-left:13%}.memories .section-heading h2 .title-accent{margin-left:.9em}
+ .meaning,.weight{padding-block:76px}.meaning-heading h2{font-size:clamp(27px,5.5vw,41px)}.meaning-heading h2>.title-accent{margin-left:1.6em}.meaning-intro{margin:30px 0 0 13%}.meaning-lead{font-size:22px}.meaning-heading .section-description{margin-top:14px;max-width:none}.meaning-story{grid-template-columns:1fr;gap:12px;margin-top:50px}.meaning-story .then{width:90%}.meaning-story .now{margin:0 0 0 7%}.meaning-note .time-thread{width:100%;height:63px;margin-top:8px}.meaning-note blockquote{font-size:31px}.new-understanding{gap:14px}.new-understanding blockquote{font-size:24px}
+ .weight-heading .section-description{font-size:16px;margin:26px 0 0 13%}.weight-composition{gap:38px;margin-top:43px}.weight-explanation h3{font-size:28px}
+ .rebuild-chapter{padding-block:74px 57px}.rebuild-layout{grid-template-columns:1fr;gap:36px}.rebuild-label{font-size:22px;margin-bottom:27px}.rebuild-copy h2{font-size:clamp(35px,6.2vw,46px)}.rebuild-copy h2 .title-line:last-child{margin-left:.55em}.rebuild-lead{font-size:16px;margin-top:25px;max-width:100%}.rebuild-signature{display:none}.rebuild-volume{padding:20px 7px 22px 13px}.rebuild-volume::before{left:2px}.rebuild-page{min-height:425px;padding:25px 23px 26px 33px}.rebuild-controls{margin-top:24px}.rebuild-controls button{padding-top:15px;line-height:1.8}.rebuild-controls button span{font-size:24px}.rebuild-panel h3{font-size:26px}.folio-metadata em{font-size:23px}.rebuild-ingredients li{font-size:15px;grid-template-columns:29px 1fr auto;gap:9px}.rebuild-ingredients small{font-size:12px}.rebuild-bottom{margin-top:30px}
 }
 @media(max-width:580px){
- .hero h1{font-size:clamp(25px,7.1vw,32px);line-height:1.65;letter-spacing:.025em}.hero h1 .hero-clause{display:block}.hero-title{bottom:103px}.hero-title>p{font-size:14px;line-height:1.85;max-width:24em;margin-top:17px}
- .scroll-invitation{bottom:30px;font-size:16px;gap:20px}.scroll-invitation i{font-size:22px}
- .memories .section-heading h2{font-size:clamp(25px,6.7vw,36px);line-height:1.7;letter-spacing:-.025em}.memories .section-heading .section-description{font-size:16px;line-height:1.95}
- .memory-closing{padding:50px 0 60px}.memory-closing p{font-size:clamp(20px,5.7vw,28px);line-height:1.9;letter-spacing:0}.memories .gallery-note{font-size:14px}
- .meaning,.weight{padding-block:65px}.meaning-heading h2{font-size:clamp(25px,6.55vw,35px);line-height:1.8}.meaning-heading h2>span{margin-left:1.8em}
- .meaning-intro{margin-left:0;padding-left:18px}.meaning-lead{font-size:20px}.meaning-heading .section-description{font-size:16px;line-height:1.9}
- .meaning-story{margin-top:35px;gap:34px}.meaning-story .moment{margin-bottom:21px}.meaning-story .moment>span+span{font-size:12px}.meaning-note{padding:26px 23px 25px}.meaning-note blockquote{font-size:27px}.meaning-note>p{font-size:14px;margin-top:19px}
- .meaning-story .now{margin:0}.new-question{font-size:16px}.new-understanding{padding-left:14px;gap:11px;margin-top:23px}.new-understanding img{width:24px}.new-understanding blockquote{font-size:21px;line-height:1.9}
- .weight-heading{gap:20px}.weight-heading h2{font-size:clamp(28px,7.4vw,40px);line-height:1.65;letter-spacing:-.025em}.weight-heading .section-description{font-size:16px;line-height:1.9}.weight-composition{margin-top:40px}
+ .hero h1{font-size:clamp(29px,7.9vw,40px);line-height:1.6}.hero h1 .hero-clause:first-child{font-size:.91em;translate:-.45em 0}.hero h1 .hero-clause:last-child{translate:.3em 0}.hero-title{bottom:103px}.hero-title>p{font-size:14px;line-height:1.85;letter-spacing:0;max-width:24em;margin-top:20px}.hero-scene{height:calc(100% - 283px)}.hero-wordmark{font-size:24vw;top:27%}.scroll-invitation{bottom:30px;font-size:16px;gap:20px}.scroll-invitation i{font-size:22px}
+ .memories .section-heading h2{font-size:clamp(25px,6.65vw,36px);line-height:1.75;letter-spacing:-.025em}.memories .section-heading .section-description{margin:26px 0 0 8%;line-height:1.95}.memory-gallery{margin-top:23px}.memory-closing{padding:50px 0 60px}.memory-closing p{font-size:clamp(20px,5.7vw,28px);line-height:1.9;letter-spacing:0}
+ .meaning,.weight{padding-block:67px}.meaning-heading h2{font-size:clamp(25px,6.55vw,35px);line-height:1.8}.meaning-intro{margin-left:8%}.meaning-lead{font-size:21px}.meaning-heading .section-description{font-size:16px;line-height:1.95}.meaning-story{margin-top:46px}.meaning-story .moment{margin-bottom:21px}.meaning-story .now{margin-left:0}.meaning-note blockquote{font-size:29px}.meaning-note>p{font-size:15px;margin-top:19px}.moment time{font-size:31px}.new-question{font-size:16px}.new-understanding{gap:12px;margin-top:23px}.new-understanding img{width:24px}.new-understanding blockquote{font-size:23px}
+ .weight-heading h2{font-size:clamp(28px,7.4vw,40px);line-height:1.65;letter-spacing:-.025em}.weight-heading .section-description{margin-left:8%;line-height:1.95}.weight-composition{margin-top:40px}.weight-principle p{font-size:15px}
 }
-@media(max-width:360px){.hero-title>p{font-size:13px;max-width:20em}.hero-title{bottom:92px}.scroll-invitation{font-size:15px;bottom:23px}.memories .section-heading h2,.meaning-heading h2{font-size:24px}.memories .section-heading .section-description,.meaning-heading .section-description,.weight-heading .section-description{font-size:15px}.meaning-lead{font-size:19px}.meaning-note blockquote{font-size:25px}.new-understanding blockquote{font-size:19px}.weight-heading h2{font-size:28px}}
+@media(max-width:380px){
+ .hero-title{bottom:92px}.hero-title>p{font-size:13px;max-width:20em}.scroll-invitation{font-size:15px;bottom:23px}.memories .section-heading h2,.meaning-heading h2{font-size:24px}.memories .section-heading .section-description,.meaning-heading .section-description,.weight-heading .section-description{font-size:15px}.meaning-lead{font-size:19px}.meaning-note blockquote{font-size:26px}.new-understanding blockquote{font-size:21px}.weight-heading h2{font-size:28px}
+ .rebuild-label{font-size:21px}.rebuild-copy h2{font-size:31px}.rebuild-page{padding-right:17px;padding-left:26px}.rebuild-panel h3{font-size:22px}.folio-metadata{flex-direction:column;align-items:flex-start;gap:7px;padding-bottom:15px}.folio-metadata em{font-size:21px}.rebuild-ingredients li{font-size:14px;grid-template-columns:23px 1fr auto;gap:5px}.rebuild-ingredients small{font-size:10px}.rebuild-controls button{font-size:13px;letter-spacing:0}
+}
+@media(prefers-reduced-motion:reduce){.hero-title .hero-clause,.hero-title>p,.title-line,.meaning-note blockquote,.binding-thread{animation:none!important;clip-path:none!important}.has-js .meaning-note .thread-ink{transition:none;stroke-dashoffset:0}}
+@media print{.hero-title .hero-clause,.hero-title>p,.title-line,.meaning-note blockquote,.binding-thread{animation:none!important;clip-path:none!important}.has-js .meaning-note .thread-ink{stroke-dashoffset:0}}
 
 </style>
 
@@ -1202,7 +1214,7 @@ html { scroll-padding-top: 0; }
 <!-- samples:hero:end -->
       <div class="scene-cross cross-one">+</div><div class="scene-cross cross-two">+</div>
     </div>
-    <div class="hero-title"><h1 id="hero-title"><span class="hero-clause">不必每次重逢，</span><span class="hero-clause">都从<span class="hero-hello">‘你好’</span>说起</span></h1><p>让 Agent 记得，和你一起经历过的生活。</p></div>
+    <div class="hero-title reveal"><h1 id="hero-title"><span class="hero-clause">不必每次重逢，</span><span class="hero-clause">都从<span class="hero-hello">‘你好’</span>说起</span></h1><p>让 Agent 记得，和你一起经历过的生活。</p></div>
     <a class="scroll-invitation" href="#continuity" aria-label="往下看看共同经历"><span>我们的过去还在</span><i aria-hidden="true">↓</i></a>
   </section>
   <section class="product-bridge" aria-label="Stone Memory 是什么">
@@ -1212,7 +1224,7 @@ html { scroll-padding-top: 0; }
 
   <section class="memories" id="continuity" aria-labelledby="memories-title">
     <div class="memory-atmosphere" aria-hidden="true"><i></i><i></i><i></i></div>
-    <div class="section-heading wrap reveal"><h2 id="memories-title">那些随口说出的细节，<br><span>渐渐有了分量</span></h2><p class="section-description"><span>走过的弯路、临时的决定、<br class="wide-break">某天夜里的牢骚。</span><span>翻开这些卡片，<br class="wide-break">看一段经历怎样长成记忆。</span></p></div>
+    <div class="section-heading wrap reveal"><h2 id="memories-title"><span class="title-line">那些随口说出的细节，</span><span class="title-line title-accent">渐渐有了分量</span></h2><p class="section-description"><span>走过的弯路、临时的决定、<br class="wide-break">某天夜里的牢骚。</span><span>翻开这些卡片，<br class="wide-break">看一段经历怎样长成记忆。</span></p></div>
     <div class="memory-gallery" role="region" aria-label="六段共同经历" aria-roledescription="轮播">
       <div class="gallery-floor" aria-hidden="true"></div>
       <div class="memory-deck" id="memory-deck"><!-- samples:cards:start -->
@@ -1234,15 +1246,15 @@ html { scroll-padding-top: 0; }
   </section>
 
   <section class="meaning section-space" id="meaning" aria-labelledby="meaning-title"><div class="wrap">
-    <div class="meaning-heading"><h2 class="reveal" id="meaning-title">今天随手记下的碎片，<br>会在以后的某一天，<br><span>自己对齐</span></h2><div class="meaning-intro reveal"><p class="meaning-lead">不是每段对话<br>都要带着任务</p><p class="section-description">你只管正常聊，<br>不必刻意为它整理一份整齐的规则。</p></div></div>
+    <div class="meaning-heading"><h2 class="reveal" id="meaning-title"><span class="title-line">今天随手记下的碎片，</span><span class="title-line">会在以后的某一天，</span><span class="title-line title-accent">自己对齐</span></h2><div class="meaning-intro reveal"><p class="meaning-lead">不是每段对话<br>都要带着任务</p><p class="section-description">你只管正常聊，<br>不必刻意为它整理一份整齐的规则。</p></div></div>
     <div class="meaning-story">
-      <article class="then reveal"><div class="moment"><span>那时</span><span>08.25 · 小账本</span></div><div class="meaning-note"><blockquote>没做到的记着，<br>做到的也记着。</blockquote><p>当时，只是在记一天的账。</p><div class="time-thread" aria-hidden="true"><i></i><i></i><i></i></div></div></article>
+      <article class="then reveal"><div class="moment"><span>那时</span><span><time datetime="2026-08-25">08.25</time> · 小账本</span></div><div class="meaning-note"><blockquote>没做到的记着，<br>做到的也记着。</blockquote><p>当时，只是在记一天的账。</p><div class="time-thread" aria-hidden="true"><svg viewBox="0 0 560 110" fill="none" preserveAspectRatio="none"><path class="thread-echo" d="M2 33C85 33 147 79 236 59S379-9 553 61"/><path class="thread-ink" pathLength="1" d="M2 30C85 30 147 76 236 56S379-12 553 58"/><circle cx="3" cy="30" r="3"/><circle cx="553" cy="58" r="3"/></svg></div></div></article>
       <article class="now reveal"><div class="moment"><span>假如后来</span></div><p class="new-question">“这一周好像又没做好，想给自己排得紧一点。”</p><div class="new-understanding"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjYwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IuS4gOWdl+eUn+edgOmdkuiLlOOAgeWktOmhtuW8gOedgOWwj+iKseeahOefs+WktCI+DQogICAgPGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJyb2NrIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iI2FhYjdhMSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzcxODE3MyIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJtb3NzIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iIzkxYjA3OCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzVmODA1NSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPg0KICAgIDxwYXRoIGQ9Ik03MiAyMTNjLTMtMzEgNy03OSAyNy0xMDggMTUtMjIgMzctMzQgNjctMzEgMzUgMyA2MSAyNSA3MyA1NSAxMyAzMiAxNCA2MiA3IDg0eiIgZmlsbD0idXJsKCNyb2NrKSIgc3Ryb2tlPSIjNjY3NjY2IiBzdHJva2Utd2lkdGg9IjQiLz4NCiAgICA8cGF0aCBkPSJNODkgMTUxYzEyLTUgMTktMjEgMzQtMjQgMTgtNCAyNCAxNCA0MSA4IDE4LTYgMjYtMjggNDQtMjQgMTMgMyAxOSAxNSAyNSAyNy03LTM2LTMxLTYyLTY2LTY1LTMxLTMtNTMgMTAtNjkgMzMtMTAgMTUtMTcgMzAtMjEgNDd6IiBmaWxsPSJ1cmwoI21vc3MpIi8+DQogICAgPGNpcmNsZSBjeD0iMTI3IiBjeT0iMTEyIiByPSI4IiBmaWxsPSIjYjhjZTk4Ii8+PGNpcmNsZSBjeD0iMjEwIiBjeT0iMTM3IiByPSI3IiBmaWxsPSIjOWZiZTgzIi8+PGNpcmNsZSBjeD0iMTA1IiBjeT0iMTc3IiByPSI1IiBmaWxsPSIjNjE3NzY0IiBvcGFjaXR5PSIuNDUiLz4NCiAgICA8cGF0aCBkPSJNMTYzIDc2YzAtMjIgMy0zNyAxMy01MSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNWQ4MDU2IiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KICAgIDxwYXRoIGQ9Ik0xNzUgMzhjLTE3LTQtMjQtMTQtMTktMjYgMTUgMSAyNCAxMCAxOSAyNnoiIGZpbGw9IiM3ZGE0NmQiLz4NCiAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNzggMjEpIj48ZWxsaXBzZSByeD0iMTMiIHJ5PSI4IiB0cmFuc2Zvcm09InJvdGF0ZSgwKSB0cmFuc2xhdGUoMTMgMCkiIGZpbGw9IiNmNGQ1YzQiLz48ZWxsaXBzZSByeD0iMTMiIHJ5PSI4IiB0cmFuc2Zvcm09InJvdGF0ZSg3MikgdHJhbnNsYXRlKDEzIDApIiBmaWxsPSIjZjBjN2I0Ii8+PGVsbGlwc2Ugcng9IjEzIiByeT0iOCIgdHJhbnNmb3JtPSJyb3RhdGUoMTQ0KSB0cmFuc2xhdGUoMTMgMCkiIGZpbGw9IiNmNGQ1YzQiLz48ZWxsaXBzZSByeD0iMTMiIHJ5PSI4IiB0cmFuc2Zvcm09InJvdGF0ZSgyMTYpIHRyYW5zbGF0ZSgxMyAwKSIgZmlsbD0iI2YwYzdiNCIvPjxlbGxpcHNlIHJ4PSIxMyIgcnk9IjgiIHRyYW5zZm9ybT0icm90YXRlKDI4OCkgdHJhbnNsYXRlKDEzIDApIiBmaWxsPSIjZjRkNWM0Ii8+PGNpcmNsZSByPSI3IiBmaWxsPSIjZDZhODRlIi8+PC9nPg0KICAgIDxwYXRoIGQ9Ik00MSAyMTRjMTgtMTAgMzgtNyA1Ny01IDM4IDQgNzYtMSAxMTQgMCAyNSAxIDQ1IDQgNjggMTMtMzUgMTctNzkgMjAtMTE5IDE5LTQ3LTEtODctNy0xMjAtMjd6IiBmaWxsPSIjYTRiNzhlIiBvcGFjaXR5PSIuNSIvPg0KICA8L3N2Zz4=" width="38" height="33" alt=""><blockquote>“那天早睡没做到，可你撑过了周会，也寄出了实验材料。先把这一周已经做到的写下来，再看看要添哪一笔。”</blockquote></div></article>
     </div>
   </div></section>
 
   <section class="weight section-space" id="weight" aria-labelledby="weight-title"><div class="wrap">
-    <div class="weight-heading reveal"><h2 id="weight-title">细节慢慢褪去，<br><span>轮廓却越来越分明</span></h2><p class="section-description"><span>经历在堆叠，记忆也懂得取舍。</span><span>少些琐碎的负担，<br class="wide-break">也不让过去变成一张白纸。</span></p></div>
+    <div class="weight-heading reveal"><h2 id="weight-title"><span class="title-line">细节慢慢褪去，</span><span class="title-line title-accent">轮廓却越来越分明</span></h2><p class="section-description"><span>经历在堆叠，记忆也懂得取舍。</span><span>少些琐碎的负担，<br class="wide-break">也不让过去变成一张白纸。</span></p></div>
     <div class="weight-composition reveal">
       <div class="layer-stage" id="layer-stage" data-condensed="false"><div class="ghost-sheet sheet-back" aria-hidden="true"><i></i><i></i><i></i></div><div class="ghost-sheet sheet-middle" aria-hidden="true"><i></i><i></i><i></i></div><div class="living-sheet"><div class="sheet-meta"><span id="weight-label">跨月记忆</span><time datetime="2026-06-09">06.09</time></div><div class="sheet-copy"><p id="weight-original">以前是半壶压缩茶叶把自己灌到通宵，后来变成柠檬茶加装MCP聊一整晚。再后来是论文一百帖加修上下文到脑浆子榨干。但以前通宵完还要硬撑着去上班，现在至少知道翘班回公寓睡了——这也算进步。我跟你说过很多次‘别喝含咖啡因的东西’、‘中午补个觉’，你大概听进去了一半。</p><p id="weight-summary" hidden>从春天到初夏，熬夜的缘由一再改变。你仍常常晚睡，却开始知道回去补觉。那些反复的提醒，也留在这段日子的来处里。</p></div><div class="kept-anchor"><span>仍能循着的时间</span><p>04.15 — 06.09 · 跨越近两个月的经历</p></div></div></div>
       <div class="weight-explanation"><div class="weight-switch" role="group" aria-label="比较整理前后"><button type="button" data-condensed="false" aria-pressed="true">整理前</button><button type="button" data-condensed="true" aria-pressed="false">整理后</button></div><h3 id="weight-result">先留下，那些未眠的夜</h3><p id="weight-explanation">从春天到初夏，熬夜的缘由、反复的提醒与细小的改变，都留在同一段经历里。</p><div class="weight-principle"><span>轻</span><p>久远的经历逐渐精简，<br>不必始终以完整细节进入上下文。</p></div><div class="weight-principle"><span>重</span><p>重要的原因与原话留有依据。<br>久远的经历，也可以很重要。</p></div></div>
@@ -1251,7 +1263,7 @@ html { scroll-padding-top: 0; }
 
   <section class="rebuild-chapter" id="rebuild" aria-labelledby="rebuild-title"><div class="wrap">
     <div class="rebuild-layout">
-      <div class="rebuild-copy reveal"><p class="rebuild-label"><svg viewBox="0 0 44 44" fill="none" aria-hidden="true"><path d="M6 9h12c4 0 6 3 6 6v24c0-4-3-6-7-6H6z M24 15c0-4 3-7 7-7h7v26h-8c-3 0-6 2-6 5"/><path class="binding-thread" d="M11 22c5-5 10-4 15 1s9 6 14 1"/><circle cx="11" cy="22" r="1.5"/></svg><span>线程重建</span></p><h2 id="rebuild-title">翻开新的一页<br><span>仍接得上<br>我们的从前</span></h2><p class="rebuild-lead"><span>把规则、记忆与重要原话，重新织回线程的上下文。</span><span>换个窗口，对话依然有迹可循。</span></p><p class="rebuild-signature" lang="en" aria-hidden="true">To be<span>continued.</span></p></div>
+      <div class="rebuild-copy reveal"><p class="rebuild-label"><svg viewBox="0 0 44 44" fill="none" aria-hidden="true"><path d="M6 9h12c4 0 6 3 6 6v24c0-4-3-6-7-6H6z M24 15c0-4 3-7 7-7h7v26h-8c-3 0-6 2-6 5"/><path class="binding-thread" d="M11 22c5-5 10-4 15 1s9 6 14 1"/><circle cx="11" cy="22" r="1.5"/></svg><span>线程重建</span></p><h2 id="rebuild-title"><span class="title-line">翻开新的一页</span><span class="title-line title-accent">仍接得上</span><span class="title-line title-accent">我们的从前</span></h2><p class="rebuild-lead"><span>把规则、记忆与重要原话，重新织回线程的上下文。</span><span>换个窗口，对话依然有迹可循。</span></p><p class="rebuild-signature" lang="en" aria-hidden="true">To be<span>continued.</span></p></div>
       <div class="rebuild-demo">
         <div class="rebuild-volume reveal"><div class="rebuild-page">
           <div class="folio-metadata"><span>重建过程示意</span><em lang="en">A thread, renewed</em></div>
